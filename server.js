@@ -2,7 +2,9 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
-app.get("/components", function (req, res) {
+app.use(express.static('public'));
+
+app.get("/", function (req, res) {
   res.render("content");
 });
 
